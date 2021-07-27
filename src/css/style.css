@@ -1,0 +1,6 @@
+.hide{
+    display: none!important;
+}
+.drag-over {
+    border: dashed 3px rgb(245, 62, 62)!important;
+}

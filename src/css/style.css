@@ -4,3 +4,15 @@
 .drag-over {
     border: dashed 3px rgb(245, 62, 62)!important;
 }
+.rotate0{
+    transform: rotate(0deg);
+}
+.rotate90 {
+    transform: rotate(90deg);
+}
+.rotate180{
+    transform: rotate(180deg);
+}
+.rotate270{
+    transform: rotate(270deg);
+}

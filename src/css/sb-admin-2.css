@@ -11278,3 +11278,27 @@ footer.sticky-footer .copyright {
 body.sidebar-toggled footer.sticky-footer {
   width: 100%;
 }
+.flat-1{
+  border:none;
+  border-radius: 10px;
+  height:250px;
+  background:url('../imgs/photos/flat1.jfif') center center ;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.flat-2{
+  border:none;
+  border-radius: 10px;
+  height:250px;
+  background:url('../imgs/photos/flat2.jfif') center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.flat-3{
+  border:none;
+  border-radius: 10px;
+  height:250px;
+  background:url('../imgs/photos/flat3.jfif') center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

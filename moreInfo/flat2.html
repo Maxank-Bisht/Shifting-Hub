@@ -7,26 +7,27 @@
 		<meta name="description" content="" />
 		<meta name="author" content="" />
 
-		<title>ShiftingHub | Dashboard</title>
+		<title>ShiftingHub | Rakesh Ahlawat</title>
 
 		<!-- Custom fonts for this template-->
-		<link href="./vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" />
+		<link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" />
 		<link
 			href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
 			rel="stylesheet"
 		/>
 
 		<!-- Custom styles for this template-->
-		<link href="./src/css/sb-admin-2.css" rel="stylesheet" />
+		<link href="../src/css/sb-admin-2.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../src/css/style1.css" />
 	</head>
 
 	<body id="page-top">
 		<!-- Page Wrapper -->
 		<div id="wrapper">
 			<!-- Sidebar -->
-			<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+			<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion toggled" id="accordionSidebar">
 				<!-- Sidebar - Brand -->
-				<a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
+				<a class="sidebar-brand d-flex align-items-center justify-content-center" href="../dashboard.html">
 					<div class="sidebar-brand-icon rotate-n-15">
 						<i class="fas fa-house-user"></i>
 					</div>
@@ -36,38 +37,13 @@
 				<!-- Divider -->
 				<hr class="sidebar-divider my-0" />
 
-				<!-- Nav Item - Dashboard -->
-				<li class="nav-item">
-					<a
-						class="nav-link"
-						href="#"
-						data-toggle="collapse"
-						data-target="#collapseTwo"
-						aria-expanded="true"
-						aria-controls="collapseTwo"
-					>
-						<i class="fas fa-fw fa-tachometer-alt"></i>
-						<span>Dashboard</span>
-					</a>
-					<div
-						id="collapseTwo"
-						class="collapse show"
-						aria-labelledby="headingTwo"
-						data-parent="#accordionSidebar"
-					>
-						<div class="bg-white py-2 collapse-inner rounded">
-							<h6 class="collapse-header">Catogery:</h6>
-							<a class="collapse-item active" href="dashboard.html">Flats</a>
-							<a class="collapse-item" href="rents.html">Rents</a>
-						</div>
-					</div>
-				</li>
-
 				<!-- Divider -->
 				<hr class="sidebar-divider" />
 				<!-- Sidebar Toggler (Sidebar) -->
-				<div class="text-center d-none d-md-inline">
-					<button class="rounded-circle border-0" id="sidebarToggle"></button>
+				<div class="text-center">
+					<a href="../dashboard.html" class="btn border-0"
+						><i class="fas fa-chevron-circle-left fa-2x" style="color: white"></i
+					></a>
 				</div>
 			</ul>
 			<!-- End of Sidebar -->
@@ -175,7 +151,7 @@
 										<div class="dropdown-list-image mr-3">
 											<img
 												class="rounded-circle"
-												src="./src/imgs/undraw_profile_1.svg"
+												src="../src/imgs/undraw_profile_1.svg"
 												alt="..."
 											/>
 											<div class="status-indicator bg-success"></div>
@@ -192,7 +168,7 @@
 										<div class="dropdown-list-image mr-3">
 											<img
 												class="rounded-circle"
-												src="./src/imgs/undraw_profile_2.svg"
+												src="../src/imgs/undraw_profile_2.svg"
 												alt="..."
 											/>
 											<div class="status-indicator"></div>
@@ -209,7 +185,7 @@
 										<div class="dropdown-list-image mr-3">
 											<img
 												class="rounded-circle"
-												src="./src/imgs/undraw_profile_3.svg"
+												src="../src/imgs/undraw_profile_3.svg"
 												alt="..."
 											/>
 											<div class="status-indicator bg-warning"></div>
@@ -259,7 +235,7 @@
 									aria-expanded="false"
 								>
 									<span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
-									<img class="img-profile rounded-circle" src="./src/imgs/undraw_profile.svg" />
+									<img class="img-profile rounded-circle" src="../src/imgs/undraw_profile.svg" />
 								</a>
 								<!-- Dropdown - User Information -->
 								<div
@@ -292,115 +268,54 @@
 					<!-- Begin Page Content -->
 					<div class="container-fluid">
 						<!-- Page Heading -->
-						<h1 class="h3 mb-4 text-gray-800">Flats :-</h1>
-						<div class="row">
-							<!-- Card 1-->
-							<div class="col-lg-4">
-								<div class="card shadow mb-4">
-									<div class="card-header pt-4">
-										<h3 class="m-0 text-center font-weight-bold text-primary">Aravind Singh</h3>
-									</div>
-									<div class="card-body pb-0">
-										<div class="card shadow p-0 border-0">
-											<div class="card-body flat-1"></div>
-										</div>
-									</div>
-									<div class="card-body">
-										<div class="card border-left-success shadow h-100 py-0 my-2">
-											<div class="card-body py-2 px-4">
+						<div class="d-sm-flex align-items-center justify-content-between mb-4">
+							<h1 class="h1 mb-0 text-gray-800">Rakesh Ahlawat</h1>
+							<div>
+								<a
+									href="./editflat2.html"
+									class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm py-2 px-5"
+									style="font-size: large"
+									>Click to Customize</a
+								>
+								<a
+									href="../dashboard.html"
+									class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm py-2 px-5"
+									style="font-size: large"
+									>Go Back to Dashboard</a
+								>
+							</div>
+						</div>
+						<div class="card shadow h-100 py-2">
+							<div class="card-body">
+								<div class="row">
+									<div class="col-5">
+										<!-- House Content -->
+										<div class="card border-left-warning shadow my-2 py-2">
+											<div class="card-body">
 												<div class="row no-gutters align-items-center">
 													<div class="col mr-2">
 														<div
 															class="
 																text-xs
 																font-weight-bold
-																text-success text-uppercase
+																text-warning text-uppercase
 																mb-1
 															"
 														>
-															Cost
+															Location
 														</div>
 														<div class="h5 mb-0 font-weight-bold text-gray-800">
-															₹ 20,00,000
+															E-32, Sector-16C, Noida, Delhi
 														</div>
 													</div>
 													<div class="col-auto">
-														<i class="fas fa-rupee-sign fa-2x text-gray-300"></i>
+														<i class="fas fa-map-marker-alt fa-2x text-gray-300"></i>
 													</div>
 												</div>
 											</div>
 										</div>
-
-										<div class="card border-left-info shadow h-100 py-0 my-2">
-											<div class="card-body py-2 px-4">
-												<div class="row no-gutters align-items-center">
-													<div class="col mr-2">
-														<div
-															class="
-																text-xs
-																font-weight-bold
-																text-info text-uppercase
-																mb-1
-															"
-														>
-															Rating
-														</div>
-														<div class="row no-gutters align-items-center">
-															<div class="col-auto">
-																<div
-																	class="h5 mb-0 mr-3 font-weight-bold text-gray-800"
-																>
-																	4/5
-																</div>
-															</div>
-															<div class="col">
-																<div class="progress progress-sm mr-2">
-																	<div
-																		class="progress-bar bg-info"
-																		role="progressbar"
-																		style="width: 80%"
-																		aria-valuenow="80"
-																		aria-valuemin="0"
-																		aria-valuemax="100"
-																	></div>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="col-auto">
-														<i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="mt-3">
-											<a
-												href="./moreInfo/flat1.html"
-												class="rounded-pill btn btn-primary btn-block btn-icon-split"
-											>
-												<span class="icon">
-													<i class="fas fa-info-circle"></i>
-												</span>
-												<span class="text">More Information</span>
-											</a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- Card 2 -->
-							<div class="col-lg-4">
-								<div class="card shadow mb-4">
-									<div class="card-header pt-4">
-										<h3 class="m-0 text-center font-weight-bold text-primary">Rakesh Ahlawat</h3>
-									</div>
-									<div class="card-body pb-0">
-										<div class="card shadow p-0 border-0">
-											<div class="card-body flat-2"></div>
-										</div>
-									</div>
-									<div class="card-body">
-										<div class="card border-left-success shadow h-100 py-0 my-2">
-											<div class="card-body py-2 px-4">
+										<div class="card border-left-success shadow py-2 my-2">
+											<div class="card-body">
 												<div class="row no-gutters align-items-center">
 													<div class="col mr-2">
 														<div
@@ -423,9 +338,8 @@
 												</div>
 											</div>
 										</div>
-
-										<div class="card border-left-info shadow h-100 py-0 my-2">
-											<div class="card-body py-2 px-4">
+										<div class="card border-left-info shadow py-2 my-2">
+											<div class="card-body">
 												<div class="row no-gutters align-items-center">
 													<div class="col mr-2">
 														<div
@@ -466,109 +380,23 @@
 												</div>
 											</div>
 										</div>
-										<div class="mt-3">
-											<a
-												href="./moreInfo/flat2.html"
-												class="rounded-pill btn btn-primary btn-block btn-icon-split"
-											>
-												<span class="icon">
-													<i class="fas fa-info-circle"></i>
-												</span>
-												<span class="text">More Information</span>
-											</a>
-										</div>
 									</div>
-								</div>
-							</div>
-							<!-- Card 3 -->
-							<div class="col-lg-4">
-								<div class="card shadow mb-4">
-									<div class="card-header pt-4">
-										<h3 class="m-0 text-center font-weight-bold text-primary">Sudhir Chawla</h3>
-									</div>
-									<div class="card-body pb-0">
-										<div class="card shadow p-0 border-0">
-											<div class="card-body flat-3"></div>
-										</div>
-									</div>
-									<div class="card-body">
-										<div class="card border-left-success shadow h-100 py-0 my-2">
-											<div class="card-body py-2 px-4">
-												<div class="row no-gutters align-items-center">
-													<div class="col mr-2">
-														<div
-															class="
-																text-xs
-																font-weight-bold
-																text-success text-uppercase
-																mb-1
-															"
-														>
-															Cost
-														</div>
-														<div class="h5 mb-0 font-weight-bold text-gray-800">
-															₹ 28,00,000
-														</div>
-													</div>
-													<div class="col-auto">
-														<i class="fas fa-rupee-sign fa-2x text-gray-300"></i>
-													</div>
-												</div>
-											</div>
-										</div>
-
-										<div class="card border-left-info shadow h-100 py-0 my-2">
-											<div class="card-body py-2 px-4">
-												<div class="row no-gutters align-items-center">
-													<div class="col mr-2">
-														<div
-															class="
-																text-xs
-																font-weight-bold
-																text-info text-uppercase
-																mb-1
-															"
-														>
-															Rating
-														</div>
-														<div class="row no-gutters align-items-center">
-															<div class="col-auto">
-																<div
-																	class="h5 mb-0 mr-3 font-weight-bold text-gray-800"
-																>
-																	4.2/5
-																</div>
-															</div>
-															<div class="col">
-																<div class="progress progress-sm mr-2">
-																	<div
-																		class="progress-bar bg-info"
-																		role="progressbar"
-																		style="width: 84%"
-																		aria-valuenow="84"
-																		aria-valuemin="0"
-																		aria-valuemax="100"
-																	></div>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="col-auto">
-														<i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="mt-3">
-											<a
-												href="./moreInfo/flat3.html"
-												class="rounded-pill btn btn-primary btn-block btn-icon-split"
-											>
-												<span class="icon">
-													<i class="fas fa-info-circle"></i>
-												</span>
-												<span class="text">More Information</span>
-											</a>
+									<div class="col-1"></div>
+									<div class="col-6">
+										<!-- House Map -->
+										<div
+											class="border border-dark bg-light dropzone map-2"
+											style="height: 500px; width: 500px"
+										>
+											<div class="Box box-1">Box</div>
+											<div class="Box box-2">Box</div>
+											<div class="Box box-3">Box</div>
+											<div class="Box box-4">Box</div>
+											<div class="Box box-5">Box</div>
+											<div class="Box box-6">Box</div>
+											<div class="Box box-7">Box</div>
+											<div class="Box box-8">Box</div>
+											<div class="Box box-9">Box</div>
 										</div>
 									</div>
 								</div>
@@ -625,13 +453,13 @@
 		</div>
 
 		<!-- Bootstrap core JavaScript-->
-		<script src="vendor/jquery/jquery.min.js"></script>
-		<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="../vendor/jquery/jquery.min.js"></script>
+		<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 		<!-- Core plugin JavaScript-->
-		<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+		<script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
 
 		<!-- Custom scripts for all pages-->
-		<script src="./src/js/sb-admin-2.min.js"></script>
+		<script src="../src/js/sb-admin-2.min.js"></script>
 	</body>
 </html>

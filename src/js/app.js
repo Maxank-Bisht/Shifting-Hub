@@ -104,6 +104,7 @@ const UICtrl = (function () {
 			div.className = 'd-flex justify-content-center align-items-center draggable';
 			div.style.boxSizing = 'border-box';
 			div.style.cursor = 'grab';
+			div.style.position = 'fixed';
 			div.style.height = `${item.length}px`;
 			div.style.width = `${item.breadth}px`;
 			div.style.zIndex = '1';
@@ -115,102 +116,102 @@ const UICtrl = (function () {
 			const isHorizontal = item.length > item.breadth ? true : false;
 			if (name.includes('bed')) {
 				if (isSquare) {
-					img = `<img src='src/imgs/bed (2).png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px'></img>`;
+					img = `<img src='../src/imgs/bed (2).png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px'></img>`;
 				} else if (isHorizontal) {
-					img = `<img src='src/imgs/bed (3).png' class='dragIcon' height ='${item.breadth}px' width='${item.length}px' class='rotate90' ></img>`;
+					img = `<img src='../src/imgs/bed (3).png' class='dragIcon' height ='${item.breadth}px' width='${item.length}px' class='rotate90' ></img>`;
 				} else {
-					img = `<img src='src/imgs/bed (3).png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px' ></img>`;
+					img = `<img src='../src/imgs/bed (3).png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px' ></img>`;
 				}
 			} else if (name.includes('chair')) {
-				img = `<img src='src/imgs/armchair.png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px'></img>`;
+				img = `<img src='../src/imgs/armchair.png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px'></img>`;
 			} else if (name.includes('bath')) {
-				img = `<img src='src/imgs/bath.png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px'></img>`;
+				img = `<img src='../src/imgs/bath.png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px'></img>`;
 			} else if (name.includes('book')) {
-				img = `<img src='src/imgs/bookshelf.png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px'></img>`;
+				img = `<img src='../src/imgs/bookshelf.png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px'></img>`;
 			} else if (name.includes('cabinet')) {
 				if (isHorizontal) {
-					img = `<img src='src/imgs/cabinet.png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px' ></img>`;
+					img = `<img src='../src/imgs/cabinet.png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px' ></img>`;
 				} else {
-					img = `<img src='src/imgs/cabinet.png' class='dragIcon' height ='${item.breadth}px' width='${item.length}px' class='rotate90' ></img>`;
+					img = `<img src='../src/imgs/cabinet.png' class='dragIcon' height ='${item.breadth}px' width='${item.length}px' class='rotate90' ></img>`;
 				}
 			} else if (name.includes('car')) {
 				if (isHorizontal) {
-					img = `<img src='src/imgs/car.png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px' ></img>`;
+					img = `<img src='../src/imgs/car.png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px' ></img>`;
 				} else {
-					img = `<img src='src/imgs/car.png' class='dragIcon' height ='${item.breadth}px' width='${item.length}px' class='rotate90' ></img>`;
+					img = `<img src='../src/imgs/car.png' class='dragIcon' height ='${item.breadth}px' width='${item.length}px' class='rotate90' ></img>`;
 				}
 			} else if (name.includes('cupboard') || name.includes('almirah')) {
-				img = `<img src='src/imgs/cupboard.png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px'></img>`;
+				img = `<img src='../src/imgs/cupboard.png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px'></img>`;
 			} else if (name.includes('desk')) {
-				img = `<img src='src/imgs/desk.png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px'></img>`;
+				img = `<img src='../src/imgs/desk.png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px'></img>`;
 			} else if (name.includes('table')) {
 				if (isSquare) {
-					img = `<img src='src/imgs/dining-table.png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px'></img>`;
+					img = `<img src='../src/imgs/dining-table.png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px'></img>`;
 				} else if (isHorizontal) {
-					img = `<img src='src/imgs/dining-table (1).png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px' ></img>`;
+					img = `<img src='../src/imgs/dining-table (1).png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px' ></img>`;
 				} else {
-					img = `<img src='src/imgs/dining-table (1).png' class='dragIcon' height ='${item.breadth}px' width='${item.length}px' class='rotate90' ></img>`;
+					img = `<img src='../src/imgs/dining-table (1).png' class='dragIcon' height ='${item.breadth}px' width='${item.length}px' class='rotate90' ></img>`;
 				}
 			} else if (name.includes('door')) {
 				if (isHorizontal) {
-					img = `<img src='src/imgs/door.png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px' ></img>`;
+					img = `<img src='../src/imgs/door.png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px' ></img>`;
 				} else {
-					img = `<img src='src/imgs/door.png' class='dragIcon' height ='${item.breadth}px' width='${item.length}px' class='rotate90' ></img>`;
+					img = `<img src='../src/imgs/door.png' class='dragIcon' height ='${item.breadth}px' width='${item.length}px' class='rotate90' ></img>`;
 				}
 			} else if (name.includes('fridge')) {
-				img = `<img src='src/imgs/fridge.png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px'></img>`;
+				img = `<img src='../src/imgs/fridge.png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px'></img>`;
 			} else if (name.includes('hob')) {
-				img = `<img src='src/imgs/hob.png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px'></img>`;
+				img = `<img src='../src/imgs/hob.png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px'></img>`;
 			} else if (name.includes('jacuzzi')) {
-				img = `<img src='src/imgs/jacuzzi.png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px'></img>`;
+				img = `<img src='../src/imgs/jacuzzi.png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px'></img>`;
 			} else if (name.includes('plant')) {
 				if (isSquare) {
-					img = `<img src='src/imgs/plant.png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px'></img>`;
+					img = `<img src='../src/imgs/plant.png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px'></img>`;
 				} else if (isHorizontal) {
-					img = `<img src='src/imgs/plant (1).png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px' ></img>`;
+					img = `<img src='../src/imgs/plant (1).png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px' ></img>`;
 				} else {
-					img = `<img src='src/imgs/plant (1).png' class='dragIcon' height ='${item.breadth}px' width='${item.length}px' class='rotate90' ></img>`;
+					img = `<img src='../src/imgs/plant (1).png' class='dragIcon' height ='${item.breadth}px' width='${item.length}px' class='rotate90' ></img>`;
 				}
 			} else if (name.includes('sink')) {
 				if (isHorizontal) {
-					img = `<img src='src/imgs/sink.png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px' ></img>`;
+					img = `<img src='../src/imgs/sink.png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px' ></img>`;
 				} else {
-					img = `<img src='src/imgs/sink.png' class='dragIcon' height ='${item.breadth}px' width='${item.length}px' class='rotate90' ></img>`;
+					img = `<img src='../src/imgs/sink.png' class='dragIcon' height ='${item.breadth}px' width='${item.length}px' class='rotate90' ></img>`;
 				}
 			} else if (name.includes('slipper') || name.includes('shoe')) {
 				if (isHorizontal) {
-					img = `<img src='src/imgs/slippers.png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px' ></img>`;
+					img = `<img src='../src/imgs/slippers.png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px' ></img>`;
 				} else {
-					img = `<img src='src/imgs/slippers.png' class='dragIcon' height ='${item.breadth}px' width='${item.length}px' class='rotate90' ></img>`;
+					img = `<img src='../src/imgs/slippers.png' class='dragIcon' height ='${item.breadth}px' width='${item.length}px' class='rotate90' ></img>`;
 				}
 			} else if (name.includes('sofa') || name.includes('couch')) {
 				if (isHorizontal) {
-					img = `<img src='src/imgs/sofa (1).png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px' ></img>`;
+					img = `<img src='../src/imgs/sofa (1).png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px' ></img>`;
 				} else {
-					img = `<img src='src/imgs/sofa (1).png' class='dragIcon' height ='${item.breadth}px' width='${item.length}px' class='rotate90' ></img>`;
+					img = `<img src='../src/imgs/sofa (1).png' class='dragIcon' height ='${item.breadth}px' width='${item.length}px' class='rotate90' ></img>`;
 				}
 			} else if (name.includes('toilet')) {
 				if (isHorizontal) {
-					img = `<img src='src/imgs/toilet.png' class='dragIcon' height ='${item.breadth}px' width='${item.length}px' class='rotate90' ></img>`;
+					img = `<img src='../src/imgs/toilet.png' class='dragIcon' height ='${item.breadth}px' width='${item.length}px' class='rotate90' ></img>`;
 				} else {
-					img = `<img src='src/imgs/toilet.png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px' ></img>`;
+					img = `<img src='../src/imgs/toilet.png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px' ></img>`;
 				}
 			} else if (name.includes('treadmill')) {
 				if (isHorizontal) {
-					img = `<img src='src/imgs/treadmill.png' class='dragIcon' height ='${item.breadth}px' width='${item.length}px' class='rotate90' ></img>`;
+					img = `<img src='../src/imgs/treadmill.png' class='dragIcon' height ='${item.breadth}px' width='${item.length}px' class='rotate90' ></img>`;
 				} else {
-					img = `<img src='src/imgs/treadmill.png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px' ></img>`;
+					img = `<img src='../src/imgs/treadmill.png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px' ></img>`;
 				}
 			} else if (name.includes('tv') || name.includes('television')) {
 				if (isHorizontal) {
-					img = `<img src='src/imgs/tv.png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px' ></img>`;
+					img = `<img src='../src/imgs/tv.png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px' ></img>`;
 				} else {
-					img = `<img src='src/imgs/tv.png' class='dragIcon' height ='${item.breadth}px' width='${item.length}px' class='rotate90' ></img>`;
+					img = `<img src='../src/imgs/tv.png' class='dragIcon' height ='${item.breadth}px' width='${item.length}px' class='rotate90' ></img>`;
 				}
 			} else if (name.includes('washbasin')) {
-				img = `<img src='src/imgs/washbasin.png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px'></img>`;
+				img = `<img src='../src/imgs/washbasin.png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px'></img>`;
 			} else if (name.includes('workplace')) {
-				img = `<img src='src/imgs/workplace.png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px'></img>`;
+				img = `<img src='../src/imgs/workplace.png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px'></img>`;
 			} else {
 				img = name;
 				div.classList.add('border');
@@ -269,7 +270,9 @@ const UICtrl = (function () {
 			document.getElementById(newItem.id).remove();
 		},
 		clearAllItems: function () {
-			document.querySelector('#playground').innerHTML = '';
+			document.querySelectorAll('.draggable').forEach(function (a) {
+				a.remove();
+			});
 		},
 		rotateItem: function (item) {
 			const id = item.id;

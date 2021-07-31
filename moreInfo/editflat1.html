@@ -24,6 +24,14 @@
 						<input type="text" id="name" class="form-control" placeholder="Enter Item name" />
 						<label for="name">Name</label>
 					</div>
+					<div>
+						<select id="company" class="form-select mt-2 py-3" aria-label="Select a company">
+							<option selected>Select a Company</option>
+							<option value="ikea">IKEA</option>
+							<option value="nitori">NITORI</option>
+							<option value="muji">MUJI</option>
+						</select>
+					</div>
 					<div class="row mt-2">
 						<div class="col-6">
 							<div class="form-floating">
@@ -82,6 +90,18 @@
 						</h5>
 					</div>
 					<div class="d-grid mt-3">
+						<h4 class="display-6">Change Floor Color:-</h4>
+						<div>
+							<select id="color" class="form-select mt-2 py-3" aria-label="Select A Color">
+								<option value="#BBBBBB">Grey</option>
+								<option value="#F6E6CB">Coffee</option>
+								<option value="#D79771">Light Brown</option>
+								<option value="#FDD2BF">Peach</option>
+								<option value="#EDF6E5">Fade Blue</option>
+							</select>
+						</div>
+					</div>
+					<div class="d-grid mt-5 pt-5">
 						<a href="./flat1.html" class="btn btn-outline-secondary btn-block">
 							<h4 class="mb-0">Go Back</h4></a
 						>
@@ -93,7 +113,11 @@
 				<div class="col-8 border-end" style="height: 100vh">
 					<h2 class="display-2">Map</h2>
 					<!-- Map -->
-					<div id="playground" class="box border border-dark bg-light mt-2 dropzone map-1">
+					<div
+						id="playground"
+						class="box border border-dark mt-2 dropzone map-1"
+						style="background-color: #f8f9fa"
+					>
 						<div class="Box box-1">Dining</div>
 						<div class="Box box-2"></div>
 						<div class="Box box-3">Bedroom 1</div>

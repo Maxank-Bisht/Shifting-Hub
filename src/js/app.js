@@ -98,7 +98,7 @@ const UICtrl = (function () {
 		// 	const data = await res.json();
 		// 	return data.icon.svg;
 		// },
-		createItem: function (item) {
+		createItem: function (item, company) {
 			if (item.length * item.breadth >= 90000) {
 				UICtrl.showAlert(item.name);
 			} else {
@@ -117,13 +117,29 @@ const UICtrl = (function () {
 				const name = item.name.toLowerCase();
 				const isSquare = item.length == item.breadth ? true : false;
 				const isHorizontal = item.length > item.breadth ? true : false;
-				if (name.includes('bed')) {
+				if (name.includes('bed') && company == 'ikea') {
 					if (isSquare) {
 						img = `<img src='../src/imgs/bed (2).png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px'></img>`;
 					} else if (isHorizontal) {
 						img = `<img src='../src/imgs/bed (3).png' class='dragIcon' height ='${item.breadth}px' width='${item.length}px' class='rotate90' ></img>`;
 					} else {
 						img = `<img src='../src/imgs/bed (3).png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px' ></img>`;
+					}
+				} else if (name.includes('bed') && company == 'nitori') {
+					if (isSquare) {
+						img = `<img src='../src/imgs/bed2.jpeg' class='dragIcon' height ='${item.length}px' width='${item.breadth}px'></img>`;
+					} else if (isHorizontal) {
+						img = `<img src='../src/imgs/bed2.jpeg' class='dragIcon' height ='${item.breadth}px' width='${item.length}px' class='rotate90' ></img>`;
+					} else {
+						img = `<img src='../src/imgs/bed2.jpeg' class='dragIcon' height ='${item.length}px' width='${item.breadth}px' ></img>`;
+					}
+				} else if (name.includes('bed') && company == 'muji') {
+					if (isSquare) {
+						img = `<img src='../src/imgs/bed3.jpg' class='dragIcon' height ='${item.length}px' width='${item.breadth}px'></img>`;
+					} else if (isHorizontal) {
+						img = `<img src='../src/imgs/bed3.jpg' class='dragIcon' height ='${item.breadth}px' width='${item.length}px' class='rotate90' ></img>`;
+					} else {
+						img = `<img src='../src/imgs/bed3.jpg' class='dragIcon' height ='${item.length}px' width='${item.breadth}px' ></img>`;
 					}
 				} else if (name.includes('chair')) {
 					img = `<img src='../src/imgs/armchair.png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px'></img>`;
@@ -147,7 +163,7 @@ const UICtrl = (function () {
 					img = `<img src='../src/imgs/cupboard.png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px'></img>`;
 				} else if (name.includes('desk')) {
 					img = `<img src='../src/imgs/desk.png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px'></img>`;
-				} else if (name.includes('table')) {
+				} else if (name.includes('table') && company == 'ikea') {
 					if (isSquare) {
 						img = `<img src='../src/imgs/dining-table.png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px'></img>`;
 					} else if (isHorizontal) {
@@ -155,6 +171,10 @@ const UICtrl = (function () {
 					} else {
 						img = `<img src='../src/imgs/dining-table (1).png' class='dragIcon' height ='${item.breadth}px' width='${item.length}px' class='rotate90' ></img>`;
 					}
+				} else if (name.includes('table') && company == 'nitori') {
+					img = `<img src='../src/imgs/table2.jpeg' class='dragIcon' height ='${item.length}px' width='${item.breadth}px'></img>`;
+				} else if (name.includes('table') && company == 'muji') {
+					img = `<img src='../src/imgs/table3.jpeg' class='dragIcon' height ='${item.length}px' width='${item.breadth}px'></img>`;
 				} else if (name.includes('door')) {
 					if (isHorizontal) {
 						img = `<img src='../src/imgs/door.png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px' ></img>`;
@@ -187,11 +207,23 @@ const UICtrl = (function () {
 					} else {
 						img = `<img src='../src/imgs/slippers.png' class='dragIcon' height ='${item.breadth}px' width='${item.length}px' class='rotate90' ></img>`;
 					}
-				} else if (name.includes('sofa') || name.includes('couch')) {
+				} else if (name.includes('sofa') && company == 'ikea') {
 					if (isHorizontal) {
 						img = `<img src='../src/imgs/sofa (1).png' class='dragIcon' height ='${item.length}px' width='${item.breadth}px' ></img>`;
 					} else {
 						img = `<img src='../src/imgs/sofa (1).png' class='dragIcon' height ='${item.breadth}px' width='${item.length}px' class='rotate90' ></img>`;
+					}
+				} else if (name.includes('sofa') && company == 'nitori') {
+					if (isHorizontal) {
+						img = `<img src='../src/imgs/sofa2.jpeg' class='dragIcon' height ='${item.length}px' width='${item.breadth}px' ></img>`;
+					} else {
+						img = `<img src='../src/imgs/sofa2.jpeg' class='dragIcon' height ='${item.breadth}px' width='${item.length}px' class='rotate90' ></img>`;
+					}
+				} else if (name.includes('sofa') && company == 'muji') {
+					if (isHorizontal) {
+						img = `<img src='../src/imgs/sofa3.jpeg' class='dragIcon' height ='${item.length}px' width='${item.breadth}px' ></img>`;
+					} else {
+						img = `<img src='../src/imgs/sofa3.jpeg' class='dragIcon' height ='${item.breadth}px' width='${item.length}px' class='rotate90' ></img>`;
 					}
 				} else if (name.includes('toilet')) {
 					if (isHorizontal) {
@@ -306,6 +338,14 @@ const UICtrl = (function () {
 		hideAlert: function () {
 			document.querySelector('.alert').style.display = 'none';
 		},
+		hideCompany: function () {
+			document.querySelector('#company').style.display = 'none';
+			document.querySelector('#company').selectedIndex = 0;
+		},
+		setFloorColor: function (color) {
+			console.log(color);
+			document.querySelector('#playground').style.backgroundColor = color;
+		},
 	};
 })();
 const AppCtrl = (function (UICtrl, ItemCtrl) {
@@ -334,16 +374,22 @@ const AppCtrl = (function (UICtrl, ItemCtrl) {
 		document.querySelector('#deleteAll').addEventListener('click', deleteAllItems);
 		//rotate btn
 		document.querySelector('#rotate').addEventListener('click', rotateItemClick);
+		//change event
+		document.querySelector('#name').addEventListener('change', showCompany);
+		//change color
+		document.querySelector('#color').addEventListener('change', changeColor);
 	};
 	const addItemSubmit = function (e) {
 		const item = UICtrl.getItemInput();
 		const { name, length, breadth } = item;
 		if (name && length && breadth) {
+			const company = document.querySelector('#company').value;
 			const newItem = ItemCtrl.addItem(name, length, breadth);
 			// const iconId = await UICtrl.getIconId(newItem);
 			// const iconSVG = await UICtrl.searchIcon(iconId);
-			UICtrl.createItem(newItem);
+			UICtrl.createItem(newItem, company);
 			UICtrl.clearInputFields();
+			UICtrl.hideCompany();
 		} else {
 			console.log('Please Enter All Information');
 		}
@@ -398,10 +444,22 @@ const AppCtrl = (function (UICtrl, ItemCtrl) {
 		const currentItem = ItemCtrl.getCurrentItem();
 		UICtrl.rotateItem(currentItem);
 	};
+	const showCompany = function () {
+		let name = document.querySelector('#name').value;
+		name = name.toLowerCase();
+		if (name === 'bed' || name === 'sofa' || name === 'table') {
+			document.querySelector('#company').style.display = 'block';
+		}
+	};
+	const changeColor = function () {
+		const color = document.querySelector('#color').value;
+		UICtrl.setFloorColor(color);
+	};
 	return {
 		init: function () {
 			UICtrl.clearEditState();
 			UICtrl.hideAlert();
+			UICtrl.hideCompany();
 			loadEventListerners();
 		},
 	};

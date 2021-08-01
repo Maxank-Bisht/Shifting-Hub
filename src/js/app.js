@@ -1,9 +1,10 @@
 const ItemCtrl = (function () {
-	const Item = function (id, name, length, breadth) {
+	const Item = function (id, name, length, breadth, company) {
 		this.id = id;
 		this.name = name;
 		this.length = length;
 		this.breadth = breadth;
+		this.company = company;
 	};
 	const data = {
 		items: [],
@@ -13,7 +14,7 @@ const ItemCtrl = (function () {
 		getItems: function () {
 			return data.items;
 		},
-		addItem: function (name, length, breadth) {
+		addItem: function (name, length, breadth, company) {
 			//Create ID
 			let ID = 'item-';
 			if (data.items.length > 0) {
@@ -22,7 +23,7 @@ const ItemCtrl = (function () {
 				ID += 0;
 			}
 			//create new item
-			newItem = new Item(ID, name, length, breadth);
+			newItem = new Item(ID, name, length, breadth, company);
 			//push to items array
 			data.items.push(newItem);
 			return newItem;
@@ -384,9 +385,10 @@ const AppCtrl = (function (UICtrl, ItemCtrl) {
 		const { name, length, breadth } = item;
 		if (name && length && breadth) {
 			const company = document.querySelector('#company').value;
-			const newItem = ItemCtrl.addItem(name, length, breadth);
+			const newItem = ItemCtrl.addItem(name, length, breadth, company);
 			// const iconId = await UICtrl.getIconId(newItem);
 			// const iconSVG = await UICtrl.searchIcon(iconId);
+			// console.log(newItem);
 			UICtrl.createItem(newItem, company);
 			UICtrl.clearInputFields();
 			UICtrl.hideCompany();
@@ -420,11 +422,13 @@ const AppCtrl = (function (UICtrl, ItemCtrl) {
 	const itemUpdateSubmit = function (e) {
 		//get item input
 		const input = UICtrl.getItemInput();
+		const company = ItemCtrl.getCurrentItem().company;
 		//update item
 		const updatedItem = ItemCtrl.updateItem(input.name, input.length, input.breadth);
 		//update UI
 		UICtrl.deleteItem(updatedItem);
-		UICtrl.createItem(updatedItem);
+		console.log(company);
+		UICtrl.createItem(updatedItem, company);
 
 		UICtrl.clearEditState();
 		e.preventDefault();
